@@ -1,3 +1,15 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    music.play(music.createSong(assets.song`intro-1`), music.PlaybackMode.UntilDone)
+    music.play(music.createSong(assets.song`intro-0`), music.PlaybackMode.UntilDone)
+    music.play(music.createSong(assets.song`A-1`), music.PlaybackMode.UntilDone)
+    music.play(music.createSong(assets.song`A-2`), music.PlaybackMode.UntilDone)
+    music.play(music.createSong(assets.song`A-0`), music.PlaybackMode.UntilDone)
+    music.play(music.createSong(assets.song`A-4`), music.PlaybackMode.UntilDone)
+    music.play(music.createSong(assets.song`B-1`), music.PlaybackMode.UntilDone)
+    music.play(music.createSong(hex`0064000408040101001c000f05001202c102c201000405002800000064002800031400060200048a0000000200011d02000400011d04000800011d08000c00011b0c001000011d10001800012718001c0001251c002000012524002800012528002c0001242c003000012230003c00012244004800012248004c0001224c005000012050005200011e52005400011e54005800011e58005c00011d5c005e00011d5e006000011e60006c0001206c0078000120`), music.PlaybackMode.UntilDone)
+    music.play(music.createSong(assets.song`C-1`), music.PlaybackMode.UntilDone)
+    music.play(music.createSong(assets.song`C-2`), music.PlaybackMode.UntilDone)
+})
 scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -139,3 +151,7 @@ let Player = sprites.create(img`
     . . . . . f f . . f f . . . . . 
     `, SpriteKind.Player)
 controller.moveSprite(Player, 70, 70)
+Player.startEffect(effects.trail, 500)
+forever(function () {
+	
+})
